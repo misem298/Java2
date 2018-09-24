@@ -1,0 +1,21 @@
+<?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.TextArea?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.PasswordField?>
+<VBox fx:controller="chat.client.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" >
+        <HBox fx:id="authPanel">
+                <TextField fx:id="loginField" promptText="Login" />
+                <PasswordField fx:id="passField" promptText="Pass"/>
+                <Button text="LogIn" onAction="#sendAuthMsg"/>
+        </HBox>
+        <TextArea fx:id="textArea" VBox.vgrow="ALWAYS" editable="false"/>
+        <HBox fx:id="msgPanel">
+        <TextField fx:id="textField" HBox.hgrow="ALWAYS"/>
+
+        <Button text="Send msg" onAction="#sendMsg"/>
+        </HBox>
+        </VBox>
